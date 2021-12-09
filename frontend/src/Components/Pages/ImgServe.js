@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 
 
 function ImgServe() {
-
+ // this is to serve a file direct
 
      // History for pushing to a new link after uploading image
   const history = useHistory(); 
