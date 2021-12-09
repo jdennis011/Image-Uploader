@@ -6,6 +6,7 @@ export default class SocialMediaShareButtons extends Component {
         const path = this.props.image_url
         const URL = `${window._env_.CLIENT_URL}/upload/${path}`
         const SERVER_URL = `${window._env_.API_URL}/download/${path}`
+        const IMG_URL = `${window._env_.CLIENT_URL}/img/${path}`
         const TEXT = `Hey, look at this cool image I uploaded!`
         return (
             <div className="btn_wrap">
@@ -16,6 +17,8 @@ export default class SocialMediaShareButtons extends Component {
                     <a href={`whatsapp://send?text=${TEXT}%0a${URL}`} data-action="share/whatsapp/share" className="iconButton"><i className="fab fa-whatsapp"></i></a>
                     <button onClick={() => {navigator.clipboard.writeText(URL)}} className="iconButton" ><i className="fas fa-copy"></i></button>
                     <a download="UploadedImage" href={SERVER_URL} className="iconButton"><i className="fas fa-download"></i></a>
+                    <a href={IMG_URL} className="iconButton"><i className="fas fa-eye"></i></a>
+                    <a href={SERVER_URL} className="iconButton"><i className="fas fa-eye"></i></a>
                 </div>
             </div>
     )
